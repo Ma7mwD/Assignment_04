@@ -23,6 +23,33 @@
             int Area = 1 / 2 * Math.Abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2));
             string msg = Area == 0 ? "points lie on a single straight line." : "points not lie on a single straight line.";
             Console.WriteLine(msg);
+
+
+            //2- Within a company, the efficiency of workers is evaluated based on the duration required
+            //to complete a specific task. 
+            Console.WriteLine("Enter the time taken by the worker to complete the task (in hours): ");
+            double timeTaken;
+            if (double.TryParse(Console.ReadLine(), out timeTaken))
+            {
+
+                if (timeTaken >= 2 && timeTaken <= 3)
+                    Console.WriteLine("The worker is highly efficient.");
+
+                else if (timeTaken > 3 && timeTaken <= 4)
+                    Console.WriteLine("The worker needs to increase their speed.");
+
+                else if (timeTaken > 4 && timeTaken <= 5)
+                    Console.WriteLine("The worker needs training to enhance their speed.");
+
+                else if (timeTaken > 5)
+                    Console.WriteLine("The worker is required to leave the company.");
+
+                else
+                    Console.WriteLine("Invalid input. Time taken cannot be less than 2 hours.");
+
+            }
+            else
+                Console.WriteLine("Invalid input. Please enter a valid number.");
         }
     }
 }
