@@ -50,6 +50,47 @@
             }
             else
                 Console.WriteLine("Invalid input. Please enter a valid number.");
+
+
+            //3- . Write a program that prints an identity matrix using for loop,
+            //in other words takes a value n from the user and shows the identity table of size n * n.
+            
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (n <= 0)
+                Console.WriteLine($"Invalid Matrix {n}");
+            else
+            {
+                Console.WriteLine($"Identity Matrix of size {n} x {n}:");
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        if (i == j)
+                            Console.Write("1 ");
+                        else
+                            Console.Write("0 ");
+                    }
+                    Console.WriteLine();       
+                }
+            }
+
+
+            //20- Write a program in C# Sharp to find the sum of all elements of the array.
+            int x, sum = 0;
+            Console.Write("Enter the size of the array: ");
+            x = int.Parse(Console.ReadLine());
+            int[] elements = new int[x];
+            for (int i = 0; i < elements.Length; i++)
+            {
+                elements[i] = Convert.ToInt16(Console.ReadLine());
+                sum += elements[i];
+            }
+
+            Console.WriteLine(sum);
+
+
+
+
         }
     }
 }
